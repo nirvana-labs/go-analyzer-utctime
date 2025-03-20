@@ -2,6 +2,9 @@ GO := go
 GOFLAGS := -v
 COVERPROFILE := coverage.out
 
+build:
+	$(GO) build $(GOFLAGS) -o bin/utctime-analyzer ./cmd/utctime/main.go
+
 clean:
 	$(GO) clean -testcache
 	rm -f $(COVERPROFILE)

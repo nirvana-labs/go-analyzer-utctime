@@ -1,4 +1,4 @@
-# golangci-lint-utctime
+# go-analyzer-utctime
 
 A custom linter for [golangci-lint](https://golangci-lint.run/) that ensures all `time.Now()` calls are followed by `.UTC()`.
 
@@ -9,7 +9,7 @@ This linter helps prevent timezone-related bugs by ensuring that all `time.Now()
 ## Installation
 
 ```bash
-go install github.com/yourusername/golangci-lint-utctime@latest
+go install github.com/nirvana-labs/go-analyzer-utctime@latest
 ```
 
 ## Usage
@@ -24,7 +24,7 @@ linters:
 linters-settings:
   custom:
     utctime:
-      path: github.com/nirvana-labs/golangci-lint-utctime
+      path: github.com/nirvana-labs/go-analyzer-utctime
 ```
 
 ## Examples
