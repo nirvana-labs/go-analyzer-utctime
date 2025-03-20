@@ -2,8 +2,6 @@ module github.com/nirvana-labs/go-analyzer-utctime
 
 go 1.23.4
 
-toolchain go1.23.4
-
 require golang.org/x/tools v0.31.0
 
 require (
