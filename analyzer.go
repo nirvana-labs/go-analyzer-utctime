@@ -1,4 +1,4 @@
-package analyzer
+package utctime
 
 import (
 	"go/ast"
