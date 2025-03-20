@@ -7,7 +7,7 @@ before:
     - go mod tidy
 
 builds:
-  - binary: go-analyzer-utctime
+  - binary: utctime
     main: ./cmd/utctime
     ldflags:
       - -s -w
