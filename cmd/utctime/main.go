@@ -1,7 +1,7 @@
 package main
 
 import (
-	"go-utctime-analyzer/pkg/analyzer"
+	"github.com/nirvana-labs/go-analyzer-utctime/pkg/analyzer"
 
 	"golang.org/x/tools/go/analysis/singlechecker"
 )
