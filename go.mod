@@ -1,4 +1,4 @@
-module go-utctime-analyzer
+module github.com/nirvana-labs/go-analyzer-utctime
 
 go 1.23.0
 
