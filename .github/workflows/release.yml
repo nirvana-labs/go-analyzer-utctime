@@ -20,18 +20,10 @@ jobs:
       contents: write
 
     steps:
-      - name: Set Release Bot GitHub App Token
-        uses: actions/create-github-app-token@21cfef2b496dd8ef5b904c159339626a10ad380e # v1.11.6
-        id: app_token
-        with:
-          app-id: ${{ vars.GH_NIRVANA_LABS_RELEASE_BOT_APP_ID }}
-          private-key: ${{ secrets.GH_NIRVANA_LABS_RELEASE_BOT_PRIVATE_KEY }}
-
       - name: Checkout
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           fetch-depth: 0
-          token: ${{ steps.app_token.outputs.token }}
 
       - name: Configure Git credentials
         run: |
@@ -49,4 +41,4 @@ jobs:
           version: latest
           args: release --clean
         env:
-          GITHUB_TOKEN: ${{ steps.app_token.outputs.token }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
