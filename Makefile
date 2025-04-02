@@ -18,7 +18,10 @@ vet:
 fmt:
 	$(GO) fmt ./...
 
-lint:
+install-lint:
+	$(GO) install github.com/golangci/golangci-lint/v2/cmd/golangci-lint@2b224c2cf4c9f261c22a16af7f8ca6408467f338
+
+lint: install-lint
 	golangci-lint run --config .golangci.yaml
 
 test:
