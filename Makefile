@@ -35,7 +35,7 @@ license-check: install-license-check
 	go-licenses check ./... --disallowed_types=forbidden,restricted --ignore=github.com/nirvana-labs
 
 install-security-check:
-	$(GO) install github.com/securego/gosec/v2/cmd/gosec@d4617f51baf75f4f809066386a4f9d27b3ac3e46
+	$(GO) install github.com/securego/gosec/v2/cmd/gosec@bfec35a303e24e2a929b586822eca8486accc670
 
 security-check: install-security-check
 	gosec ./...
